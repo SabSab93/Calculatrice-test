@@ -26,13 +26,13 @@ test('test', async ({ page }) => {
 
 
 test('test compteur start 0', async ({ page }) => {
-  await page.goto('http://127.0.0.1:5173');
+  await page.goto('http://localhost:5173');
   const compteur = page.locator('#compteur');
   await expect(compteur).toHaveText('count is 0'); 
 });
 
 test('test compteur égal à 2 avec 2 clics', async ({ page }) => {
-  await page.goto('http://127.0.0.1:5173/');
+  await page.goto('http://localhost:5173');
   const increment = page.locator('#increment');
   const compteur = page.locator('#compteur');
   await increment.click();
